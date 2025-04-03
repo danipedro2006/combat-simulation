@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=SimplexNoiseGenerator
+comment0.text=\r\n\ @author\ Christian\ Bargmann\ <christian.bargmann@haw-hamburg.de>\r\n\ @version\ 12.07.2017\r\n\ @see\ startup\r\n\ @since\ 12.07.2017\ ,\ 17\:25\:50\r\n\r\n
+comment1.params=octaves\ roughness\ scale
+comment1.target=SimplexNoiseGenerator(int,\ double,\ double)
+comment1.text=\r\n\ Konstruktor\ fuer\ neue\ Exemplare\ der\ Klasse\ SimplexNoiseGenerator.\r\n
+comment2.params=width\ height
+comment2.target=double[][]\ createWorld(int,\ int)
+comment2.text=\r\n\ Ueberschreiben\ der\ Methode\ createWorld\ in\ der\ Klasse\ SimplexNoiseGenerator.\r\n\ Fuer\ Details\ zur\ Implementierung\ siehe\:\r\n\ \r\n\ @see\ worldgeneration.WorldGenerator\#createWorld(int,\ int)\r\n
+comment3.params=width\ height
+comment3.target=double[][]\ generateOctavedSimplexNoise(int,\ int)
+numComments=4

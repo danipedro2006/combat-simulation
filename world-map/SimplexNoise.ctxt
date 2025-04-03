@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=SimplexNoise
+comment0.text=\r\n\ /*\ A\ speed-improved\ simplex\ noise\ algorithm\ for\ 2D,\ 3D\ and\ 4D\ in\ Java.\r\n\r\n\ Based\ on\ example\ code\ by\ Stefan\ Gustavson\ (stegu@itn.liu.se).\ Optimisations\r\n\ by\ Peter\ Eastman\ (peastman@drizzle.stanford.edu).\ Better\ rank\ ordering\ method\r\n\ for\ 4D\ by\ Stefan\ Gustavson\ in\ 2012.\r\n\r\n\ This\ could\ be\ speeded\ up\ even\ further,\ but\ it's\ useful\ as\ it\ is.\r\n\r\n\ Version\ 2012-03-09\r\n\r\n\ This\ code\ was\ placed\ in\ the\ public\ domain\ by\ its\ original\ author,\ Stefan\r\n\ Gustavson.\ You\ may\ use\ it\ as\ you\ see\ fit,\ but\ attribution\ is\ appreciated.\r\n\ \r\n\ @author\ Christian\ Bargmann\ <christian.bargmann@haw-hamburg.de>\r\n\ @version\ 12.07.2017\r\n\ @see\ util\r\n\ @since\ 12.07.2017\ ,\ 17\:13\:04\r\n\r\n
+comment1.params=seed
+comment1.target=void\ setSeed(long)
+comment2.params=x
+comment2.target=int\ fastfloor(double)
+comment3.params=g\ x\ y
+comment3.target=double\ dot(SimplexNoise.Grad,\ double,\ double)
+comment4.params=g\ x\ y\ z
+comment4.target=double\ dot(SimplexNoise.Grad,\ double,\ double,\ double)
+comment5.params=g\ x\ y\ z\ w
+comment5.target=double\ dot(SimplexNoise.Grad,\ double,\ double,\ double,\ double)
+comment6.params=xin\ yin
+comment6.target=double\ noise(double,\ double)
+comment7.params=xin\ yin\ zin
+comment7.target=double\ noise(double,\ double,\ double)
+comment8.params=x\ y\ z\ w
+comment8.target=double\ noise(double,\ double,\ double,\ double)
+numComments=9

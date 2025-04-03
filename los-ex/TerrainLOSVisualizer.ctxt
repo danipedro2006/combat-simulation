@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=TerrainLOSVisualizer
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ generateRandomGrid()
+comment3.params=x1\ y1\ z1\ x2\ y2\ z2
+comment3.target=void\ checkLineOfSight(int,\ int,\ double,\ int,\ int,\ double)
+comment4.params=x1\ y1\ z1\ x2\ y2\ z2\ x3\ y3\ z3
+comment4.target=boolean\ isPointObstructing(double,\ double,\ double,\ double,\ double,\ double,\ double,\ double,\ double)
+comment5.params=x1\ y1\ x2\ y2\ x3\ y3
+comment5.target=boolean\ isPointOnLine(double,\ double,\ double,\ double,\ double,\ double)
+comment6.params=x1\ y1\ z1\ x2\ y2\ z2\ x3\ y3
+comment6.target=double\ getExpectedAltitude(double,\ double,\ double,\ double,\ double,\ double,\ double,\ double)
+comment7.params=g
+comment7.target=void\ paintComponent(java.awt.Graphics)
+numComments=8

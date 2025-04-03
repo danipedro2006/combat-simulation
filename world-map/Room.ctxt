@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Room
+comment1.params=left\ right\ width\ height
+comment1.target=Room(int,\ int,\ int,\ int)
+comment1.text=\r\n\ Konstruktor\ fuer\ neue\ Exemplare\ der\ Klasse\ Room.\r\n\ \r\n\ @param\ left\r\n\ @param\ right\r\n\ @param\ width\r\n\ @param\ height\r\n
+comment2.params=room
+comment2.target=boolean\ touches(Room)
+comment2.text=\r\n\ Returns\ true\ if\ room\ is\ intersecting\ another\ room,\ false\ if\ not\r\n\ @param\ room\r\n\ @return\r\n
+comment3.params=room\ padding
+comment3.target=boolean\ touches(Room,\ int)
+comment3.text=\r\n\ Returns\ true\ if\ room\ is\ intersecting\ another\ room,\ false\ if\ not\r\n\ \r\n\ @param\ room\r\n\ @param\ padding\r\n\ @return\r\n
+comment4.params=
+comment4.target=int\ getLeft()
+comment4.text=\r\n\ Getter-Methode\ zu\ left.\ Erm\u00F6glicht\ es\ einem\ Klienten,\ den\ Wert\ der\r\n\ Exemplarvariablen\ left\ abzufragen.\r\n\r\n\ @return\ the\ left\r\n
+comment5.params=
+comment5.target=int\ getRight()
+comment5.text=\r\n\ Getter-Methode\ zu\ right.\ Erm\u00F6glicht\ es\ einem\ Klienten,\ den\ Wert\ der\r\n\ Exemplarvariablen\ right\ abzufragen.\r\n\r\n\ @return\ the\ right\r\n
+comment6.params=
+comment6.target=int\ getTop()
+comment6.text=\r\n\ Getter-Methode\ zu\ top.\ Erm\u00F6glicht\ es\ einem\ Klienten,\ den\ Wert\ der\r\n\ Exemplarvariablen\ top\ abzufragen.\r\n\r\n\ @return\ the\ top\r\n
+comment7.params=
+comment7.target=int\ getBottom()
+comment7.text=\r\n\ Getter-Methode\ zu\ bottom.\ Erm\u00F6glicht\ es\ einem\ Klienten,\ den\ Wert\ der\r\n\ Exemplarvariablen\ bottom\ abzufragen.\r\n\r\n\ @return\ the\ bottom\r\n
+numComments=8

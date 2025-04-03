@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Test
+comment1.params=s\ name
+comment1.target=void\ greet(java.util.function.Consumer,\ java.lang.String)
+comment2.params=s\ s2
+comment2.target=void\ shoot(java.util.function.Consumer,\ java.lang.String)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

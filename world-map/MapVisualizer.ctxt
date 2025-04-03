@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MapVisualizer
+comment0.text=\r\n\ @author\ Christian\ Bargmann\ <christian.bargmann@haw-hamburg.de>\r\n\ @version\ 21.08.2017\r\n\ @see\ dungeongeneration.worldgeneration\r\n\ @since\ 21.08.2017\ ,\ 10\:08\:53\r\n\r\n
+comment1.params=array
+comment1.target=void\ visualize(double[][])
+comment1.text=\r\n\ Visualizes\ a\ given\ Array\r\n\ \r\n\ @param\ array\r\n
+comment2.params=array\ filename
+comment2.target=void\ createMapImage(double[][],\ java.lang.String)
+comment2.text=\r\n\ Private\ Method\ for\ viualizing\ a\ given\ array\r\n\ \r\n\ @param\ array\r\n\ @param\ filename\r\n
+numComments=3
