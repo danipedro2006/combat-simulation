@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=DirectionPanel
+comment1.params=
+comment1.target=DirectionPanel()
+comment2.params=e
+comment2.target=void\ mouseDragged(java.awt.event.MouseEvent)
+comment3.params=e
+comment3.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment4.params=mouseX\ mouseY
+comment4.target=void\ updateAngleFromMouse(int,\ int)
+comment5.params=
+comment5.target=double\ getAngle()
+comment6.params=g
+comment6.target=void\ paintComponent(java.awt.Graphics)
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8
