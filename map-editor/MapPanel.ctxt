@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=MapPanel
+comment1.params=
+comment1.target=MapPanel()
+comment10.params=g
+comment10.target=void\ paintComponent(java.awt.Graphics)
+comment2.params=e
+comment2.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment3.params=e
+comment3.target=void\ mouseDragged(java.awt.event.MouseEvent)
+comment4.params=path
+comment4.target=void\ loadBackgroundImage(java.lang.String)
+comment5.params=
+comment5.target=void\ toggleBackground()
+comment6.params=
+comment6.target=void\ toggleGrid()
+comment7.params=
+comment7.target=void\ toggleElevation()
+comment8.params=
+comment8.target=void\ generateRandomElevation()
+comment9.params=filename
+comment9.target=void\ saveElevation(java.lang.String)
+numComments=11
