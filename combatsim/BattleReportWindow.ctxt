@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=BattleReportWindow
+comment1.params=title
+comment1.target=BattleReportWindow(java.lang.String)
+comment2.params=text
+comment2.target=void\ updateReport(java.lang.String)
+comment3.params=text
+comment3.target=void\ appendReport(java.lang.String)
+numComments=4

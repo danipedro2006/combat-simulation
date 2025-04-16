@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Unit
-comment1.params=x\ y\ killProbability\ range\ type
-comment1.target=Unit(int,\ int,\ double,\ double,\ java.lang.String)
-comment2.params=target
-comment2.target=boolean\ canAttack(Unit)
-comment3.params=
-comment3.target=java.lang.String\ toString()
-numComments=4

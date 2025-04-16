@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=BattleManager
-comment1.params=redUnits\ blueUnits
-comment1.target=BattleManager(java.util.ArrayList,\ java.util.ArrayList)
-comment2.params=
-comment2.target=void\ findTargets()
-comment3.params=
-comment3.target=void\ simulateCombat()
-numComments=4

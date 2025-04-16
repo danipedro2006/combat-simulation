@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Terrain
+comment1.params=
+comment1.target=void\ loadTerrainElevation()
+comment2.params=x\ y
+comment2.target=double\ getAltitude(int,\ int)
+comment3.params=x1\ y1\ z1\ x2\ y2\ z2
+comment3.target=boolean\ checkLineOfSight(int,\ int,\ double,\ int,\ int,\ double)
+comment4.params=x1\ y1\ z1\ x2\ y2\ z2\ x3\ y3\ z3
+comment4.target=boolean\ isPointObstructing(int,\ int,\ double,\ int,\ int,\ double,\ int,\ int,\ double)
+comment5.params=x1\ y1\ x2\ y2\ x3\ y3
+comment5.target=boolean\ isPointOnLine(int,\ int,\ int,\ int,\ int,\ int)
+comment6.params=x1\ y1\ z1\ x2\ y2\ z2\ x3\ y3
+comment6.target=double\ getExpectedAltitude(int,\ int,\ double,\ int,\ int,\ double,\ int,\ int)
+comment7.params=x\ y
+comment7.target=boolean\ isObstructed(int,\ int)
+numComments=8

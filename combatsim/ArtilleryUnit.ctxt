@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ArtilleryUnit
+comment1.params=x\ y\ z\ kp\ range\ team\ type\ shells
+comment1.target=ArtilleryUnit(int,\ int,\ double,\ double,\ int,\ java.lang.String,\ java.lang.String,\ int)
+comment2.params=x\ y
+comment2.target=void\ setTarget(int,\ int)
+comment3.params=target
+comment3.target=boolean\ canAttack(Unit)
+comment4.params=x\ y\ g2\ color
+comment4.target=void\ drawUnit(int,\ int,\ java.awt.Graphics,\ java.awt.Color)
+comment5.params=
+comment5.target=java.util.List\ getDestroyedTargets()
+comment6.params=targets
+comment6.target=java.util.ArrayList\ fireVolley(java.util.List)
+numComments=7

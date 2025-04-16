@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Unit
+comment1.params=x\ y\ z\ killProbability\ range\ team\ type
+comment1.target=Unit(int,\ int,\ double,\ double,\ double,\ java.lang.String,\ java.lang.String)
+comment2.params=observer
+comment2.target=boolean\ isInSensorRangeOf(Unit)
+comment3.params=
+comment3.target=java.util.List\ getPath()
+comment4.params=x\ y\ g2\ color
+comment4.target=void\ drawUnit(int,\ int,\ java.awt.Graphics,\ java.awt.Color)
+comment5.params=
+comment5.target=void\ move()
+comment6.params=p
+comment6.target=void\ addPathPoint(Unit.Point)
+comment7.params=target
+comment7.target=boolean\ canAttack(Unit)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

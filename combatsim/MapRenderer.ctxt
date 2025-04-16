@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=MapRenderer
+comment1.params=g\ units\ color\ cellsize
+comment1.target=void\ drawUnits(java.awt.Graphics,\ java.util.ArrayList,\ java.awt.Color,\ int)
+comment2.params=g\ attackPairs\ color\ cellsize
+comment2.target=void\ drawAtack(java.awt.Graphics,\ java.util.Map,\ java.awt.Color,\ int)
+comment3.params=g\ impactpoints\ cellsize
+comment3.target=void\ drawImpactPoints(java.awt.Graphics,\ java.util.ArrayList,\ int)
+comment4.params=g\ blueUnits\ cellsize
+comment4.target=void\ drawPath(java.awt.Graphics,\ java.util.ArrayList,\ int)
+numComments=5

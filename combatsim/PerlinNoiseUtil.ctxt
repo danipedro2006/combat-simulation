@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=PerlinNoiseUtil
+comment1.params=
+comment1.target=PerlinNoiseUtil()
+comment2.params=x\ y\ z
+comment2.target=double\ noise(int,\ int,\ double)
+comment3.params=t
+comment3.target=double\ fade(double)
+comment4.params=t\ a\ b
+comment4.target=double\ lerp(double,\ double,\ double)
+comment5.params=hash\ x\ y\ z
+comment5.target=double\ grad(int,\ double,\ double,\ double)
+numComments=6

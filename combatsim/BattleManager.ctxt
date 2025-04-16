@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=BattleManager
+comment1.params=redUnits\ blueUnits
+comment1.target=BattleManager(java.util.ArrayList,\ java.util.ArrayList)
+comment10.params=
+comment10.target=java.lang.String\ getLossesReport()
+comment11.params=
+comment11.target=java.util.List\ getAllUnits()
+comment2.params=
+comment2.target=java.util.Map\ getAttackPairs()
+comment3.params=
+comment3.target=void\ findTargets()
+comment4.params=
+comment4.target=void\ updateVisibility()
+comment5.params=
+comment5.target=Unit\ findArtyUnit()
+comment6.params=
+comment6.target=void\ moveUnits()
+comment7.params=
+comment7.target=void\ simulateCombat()
+comment8.params=
+comment8.target=void\ clearDestroyedTargets()
+comment9.params=
+comment9.target=java.lang.String\ getInitialForceRatio()
+numComments=12
