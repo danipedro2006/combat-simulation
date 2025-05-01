@@ -8,6 +8,12 @@ public class UnitFactory {
                 return new InfantryUnit(x, y, z, 0.4, 4, team, type);
             case "ARTY":
                 return new ArtilleryUnit(x, y, z, 0.8, 60, team, type, 5);
+            case "AD":
+                return new AirDefenseUnit(x, y, z, 0.8, 60, team, type);
+
+            case "CAS":
+                return new CASUnit(x, y, z, 0.4, 4, team, type);
+
             default:
                 throw new IllegalArgumentException("Unknown unit type: " + type);
         }

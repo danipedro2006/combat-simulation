@@ -5,26 +5,60 @@ import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
+import java.awt.Image;
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
 
 
 class Terrain {
-    
+    public static int scale=10;
+    public static double metricdistance;
+    public static int griddistance;
+
     public static final int MAP_SIZE = 1000;
     public static final int CELL_SIZE =10;
     public static final int GRID_SIZE = MAP_SIZE/CELL_SIZE;
-       
+
     public static final int MAX_ALTITUDE = 20;
+
     
     public static double[][] altitudeGrid = new double[GRID_SIZE][GRID_SIZE];
     public static boolean[][] obstructingCells = new boolean[GRID_SIZE][GRID_SIZE];
 
-    // Initialize terrain data
-     static {
-        loadTerrainElevation();
-     }
+    private static Image mapImage;
 
-   
+    // Initialize terrain data
+    static {
+        try {
+            mapImage = new ImageIcon("C:\\Users\\danie\\Desktop\\comsim\\map.png").getImage();
+        } catch (Exception e) {
+            System.err.println("Failed to load terrain image: " + e.getMessage());
+        }
+        loadTerrainElevation();
+    }
+
+    public static void drawMap(Graphics g, int width, int height) {
+        if (mapImage != null) {
+            g.drawImage(mapImage, 0, 0, width, height, null);
+        }
+    }
+    
+    
+    public static int getMapPixelWidth() {
+    if (mapImage != null) {
+        return mapImage.getWidth(null);
+    }
+    return -1; // Or throw exception if image is not loaded
+}
+
+
+ public static int getMapPixelHeight() {
+    if (mapImage != null) {
+        return mapImage.getWidth(null);
+    }
+    return -1; // Or throw exception if image is not loaded
+}
+
     
     public static void loadTerrainElevation(){
         String csvPath = "C:\\Users\\danie\\Desktop\\comsim\\elevation-data\\elevation.csv"; // path to your CSV file
@@ -51,40 +85,52 @@ class Terrain {
             e.printStackTrace();
         }
     }
-    
-    
+
 
     // Get altitude at a specific grid cell
     public static double getAltitude(int x, int y) {
         return altitudeGrid[x][y];
+
+    }
     
-}
+    public static int distanceToGridMetric(double metricdistance){
+        griddistance=(int)metricdistance/scale;
+        
+        return griddistance;
+
+    }
     
+    public static  double gridTodistance(int griddistance){
+        metricdistance=griddistance*scale;
+        return metricdistance;
+
+    }
+
     public static boolean checkLineOfSight(int x1, int y1, double z1, int x2, int y2, double z2) {
-    System.out.println("Checking Line of Sight...");
-    boolean hasObstruction = false;
+        System.out.println("Checking Line of Sight...");
+        boolean hasObstruction = false;
 
-    for (int x = Math.min(x1, x2); x <= Math.max(x1, x2); x++) {
-        for (int y = Math.min(y1, y2); y <= Math.max(y1, y2); y++) {
-            if ((x == x1 && y == y1) || (x == x2 && y == y2)) continue; // Skip endpoints
+        for (int x = Math.min(x1, x2); x <= Math.max(x1, x2); x++) {
+            for (int y = Math.min(y1, y2); y <= Math.max(y1, y2); y++) {
+                if ((x == x1 && y == y1) || (x == x2 && y == y2)) continue; // Skip endpoints
 
-            double z3 = altitudeGrid[x][y];
-            if (isPointObstructing(x1, y1, z1, x2, y2, z2, x, y, z3)) {
-                System.out.println("Obstruction at (" + x + ", " + y + ") with altitude " + z3);
-                obstructingCells[x][y] = true; // Mark cell as obstructing
-                hasObstruction = true;
+                double z3 = altitudeGrid[x][y];
+                if (isPointObstructing(x1, y1, z1, x2, y2, z2, x, y, z3)) {
+                    System.out.println("Obstruction at (" + x + ", " + y + ") with altitude " + z3);
+                    obstructingCells[x][y] = true; // Mark cell as obstructing
+                    hasObstruction = true;
+                }
             }
         }
+
+        if (!hasObstruction) {
+            System.out.println("No obstructions found.");
+        }
+
+        return !hasObstruction; // Returns true if line of sight is clear
     }
 
-    if (!hasObstruction) {
-        System.out.println("No obstructions found.");
-    }
-
-    return !hasObstruction; // Returns true if line of sight is clear
-}
-
-     private static boolean isPointObstructing(int x1, int y1, double z1, int x2, int y2, double z2, int x3, int y3, double z3) {
+    private static boolean isPointObstructing(int x1, int y1, double z1, int x2, int y2, double z2, int x3, int y3, double z3) {
         if (!isPointOnLine(x1, y1, x2, y2, x3, y3)) {
             return false; // If point is not on the line, it cannot obstruct
         }
@@ -113,6 +159,5 @@ class Terrain {
     public static boolean isObstructed(int x, int y) {
         return obstructingCells[x][y];
     }
-    
-    
-    }
+
+}

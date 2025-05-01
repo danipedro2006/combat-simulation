@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=AirDefenseUnit
+comment1.params=x\ y\ z\ killProbability\ range\ team\ type
+comment1.target=AirDefenseUnit(int,\ int,\ double,\ double,\ double,\ java.lang.String,\ java.lang.String)
+comment2.params=rx\ ry\ g2\ color
+comment2.target=void\ drawUnit(int,\ int,\ java.awt.Graphics,\ java.awt.Color)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+comment4.params=g
+comment4.target=void\ paintComponent(java.awt.Graphics)
+numComments=5

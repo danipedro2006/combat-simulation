@@ -6,7 +6,7 @@ public class TankUnit extends Unit implements gunnable{
     public double protection;
     public double killProbability;
 
-    public TankUnit (int x, int y,double z, double killProbability, double range, String team, String type, double protection){
+    public TankUnit (int x, int y,int z, double killProbability, double range, String team, String type, double protection){
         super(x, y,z, killProbability, range, team, type);
         this.protection=protection;
 

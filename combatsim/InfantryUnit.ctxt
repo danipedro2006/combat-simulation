@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=InfantryUnit
 comment1.params=x\ y\ z\ killProbability\ range\ team\ type
-comment1.target=InfantryUnit(int,\ int,\ double,\ double,\ double,\ java.lang.String,\ java.lang.String)
+comment1.target=InfantryUnit(int,\ int,\ int,\ double,\ double,\ java.lang.String,\ java.lang.String)
 numComments=2

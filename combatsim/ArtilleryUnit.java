@@ -12,7 +12,7 @@ public class ArtilleryUnit extends Unit {
     public List<Unit> destroyed = new ArrayList<>();
     public int shellEffect=5;
 
-    public ArtilleryUnit(int x, int y, double z, double kp, int range,String team,String type, int shells) {
+    public ArtilleryUnit(int x, int y, int z, double kp, int range,String team,String type, int shells) {
         super(x, y, z, kp, range,"Blue","ARTY"); // Calls the Unit constructor
         this.shells = shells;
         this.fireRadius = fireRadius;

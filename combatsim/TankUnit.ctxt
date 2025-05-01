@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=TankUnit
 comment1.params=x\ y\ z\ killProbability\ range\ team\ type\ protection
-comment1.target=TankUnit(int,\ int,\ double,\ double,\ double,\ java.lang.String,\ java.lang.String,\ double)
+comment1.target=TankUnit(int,\ int,\ int,\ double,\ double,\ java.lang.String,\ java.lang.String,\ double)
 comment2.params=x\ y\ g2\ color
 comment2.target=void\ drawUnit(int,\ int,\ java.awt.Graphics,\ java.awt.Color)
 comment3.params=target

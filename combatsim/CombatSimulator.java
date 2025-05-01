@@ -16,7 +16,7 @@ public class CombatSimulator extends JPanel {
     
     public BattleManager battleManager;
     
-    public String[] unitTypes = { "INF", "TKS", "ARTY" };
+    public String[] unitTypes = { "INF", "TKS", "ARTY", "AD", "CAS" };
     private ArrayList<Unit> redUnits = new ArrayList<>();
     private ArrayList<Unit> blueUnits = new ArrayList<>();
     private Map<Unit, Unit> attackpairs;
@@ -295,6 +295,20 @@ public class CombatSimulator extends JPanel {
                      
             });
             
+            loadItem.addActionListener(e -> {
+                
+                System.out.println("Called scenario import method in combat simulator");
+                  try
+                  {
+                      battleManager.loadUnitsFromCSV("scenario.csv");
+                  }
+                  catch (java.io.IOException ioe)
+                  {
+                      ioe.printStackTrace();
+                  }
+                     
+            });
+            
         // TOOLS menu
         JMenu toolsMenu = new JMenu("Tools");
         JMenuItem resetMapItem = new JMenuItem("Reset Map");
@@ -343,8 +357,8 @@ public class CombatSimulator extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Image  backgroundImage= new ImageIcon("C:\\Users\\danie\\Desktop\\comsim\\map.png").getImage();
-        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        
+        Terrain.drawMap(g, getWidth(), getHeight());
         Random rand = new Random();
 
         if (showAllUnits) {

@@ -9,7 +9,7 @@ class Unit {
     public static int UNIT_L=20;
     public static int UNIT_W=10;
     public int x, y;
-    public double z;         // Position on the grid
+    public int z;         // Position on the grid
     public double killProbability;  // Probability of a successful attack
     public double range;     // Attack range in grid units
     public String team;      // "Red" or "Blue"
@@ -32,10 +32,10 @@ class Unit {
 
     }
 
-    public Unit(int x, int y,double z, double killProbability, double range, String team, String type) {
+    public Unit(int x, int y,int z, double killProbability, double range, String team, String type) {
         this.x = x;
         this.y = y;
-        this.z = Terrain.getAltitude(x, y);
+        this.z =(int) Terrain.getAltitude(x, y);
         this.killProbability = killProbability;
         this.range = range;
         this.team = team;

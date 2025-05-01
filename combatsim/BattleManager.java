@@ -4,11 +4,14 @@ import java.util.Map;
 import java.util.Random;
 import java.util.HashSet;
 import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 class BattleManager {
     public ArrayList<Unit> redUnits;
     public ArrayList<Unit> blueUnits;
-    public ArrayList<Unit> allUnits;
+
     private Map<Unit, Unit> attackPairs = new HashMap<>();
     private Random random = new Random();
     ArrayList<Unit> toRemove = new ArrayList<>();
@@ -18,6 +21,20 @@ class BattleManager {
     public BattleManager(ArrayList<Unit> redUnits, ArrayList<Unit> blueUnits) {
         this.redUnits = redUnits;
         this.blueUnits = blueUnits;
+
+        // Check if both redUnits and blueUnits are empty before loading from CSV
+        // if (redUnits.isEmpty() && blueUnits.isEmpty()) {
+            // try
+            // {
+               // loadUnitsFromCSV("scenario.csv");
+            // }
+            // catch (IOException ioe)
+            // {
+                // ioe.printStackTrace();
+            // }
+        // }
+
+        // Set sensor ranges for the units
         for (Unit red : redUnits) {
             red.sensorRange = 6;
         }
@@ -26,6 +43,7 @@ class BattleManager {
             blue.sensorRange = 3;
         }
 
+        // Update initial counts
         this.initialRedCount = redUnits.size();
         this.initialBlueCount = blueUnits.size();
     }
@@ -142,32 +160,29 @@ class BattleManager {
     }
 
     public String getInitialForceRatio() {
-        if (initialBlueCount == 0) return "Infinite (no blue units)";
-        double ratio = (double) initialRedCount / initialBlueCount;
+        if (this.initialBlueCount == 0) return "Infinite (no blue units)";
+        double ratio = (double) this.initialRedCount / this.initialBlueCount;
         return String.format("Initial Force Ratio: Red : Blue = %.2f : 1", ratio);
     }
-    
-    
 
-   
 
 
     public String getLossesReport() {
         int currentRed = redUnits.size();
         int currentBlue = blueUnits.size();
 
-        int redLosses = initialRedCount - currentRed;
-        int blueLosses = initialBlueCount - currentBlue;
+        int redLosses = this.initialRedCount - currentRed;
+        int blueLosses = this.initialBlueCount - currentBlue;
 
-        double redLossPct = (redLosses * 100.0) / initialRedCount;
-        double blueLossPct = (blueLosses * 100.0) / initialBlueCount;
+        double redLossPct = (redLosses * 100.0) / this.initialRedCount;
+        double blueLossPct = (blueLosses * 100.0) / this.initialBlueCount;
 
         return String.format(
             "Red losses: %d (%.1f%%) | Blue losses: %d (%.1f%%)",
             redLosses, redLossPct, blueLosses, blueLossPct
         );
     }
-    
+
     public List<Unit> getAllUnits(){
         List<Unit> allUnits = new ArrayList<>();
         if (redUnits != null) {
@@ -177,7 +192,40 @@ class BattleManager {
             allUnits.addAll(blueUnits);
         }
         return allUnits;
-    
+
     }
+
+    public void loadUnitsFromCSV(String filename) throws IOException {
+        System.out.println("Load scenario called");
+        List<Unit> allUnits = ScenarioCSVExporter.loadUnitsFromCSV(filename);
+
+        redUnits.clear();
+        blueUnits.clear();
+
+        for (Unit u : allUnits) {
+            if ("red".equalsIgnoreCase(u.team)) {
+                redUnits.add(u);
+            } else if ("blue".equalsIgnoreCase(u.team)) {
+                blueUnits.add(u);
+            } else {
+                System.out.println("Unknown team: " + u.team + " — unit skipped.");
+            }
+        }
+
+        // Set sensor ranges
+        for (Unit red : redUnits) {
+            red.sensorRange = 6;
+        }
+        for (Unit blue : blueUnits) {
+            blue.sensorRange = 3;
+        }
+
+        // Update initial counts
+        this.initialRedCount = redUnits.size();
+        this.initialBlueCount = blueUnits.size();
+    }
+    
+   
+
 
 }
