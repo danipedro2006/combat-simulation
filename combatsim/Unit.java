@@ -1,3 +1,4 @@
+ 
 import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Font;
@@ -5,9 +6,9 @@ import java.awt.Graphics;
 import java.util.List;
 import java.util.ArrayList;
 
-class Unit {
-    public static int UNIT_L=20;
-    public static int UNIT_W=10;
+public class Unit {
+    public static int UNIT_L=Constants.UNIT_L;
+    public static int UNIT_W=Constants.UNIT_W;
     public int x, y;
     public int z;         // Position on the grid
     public double killProbability;  // Probability of a successful attack
@@ -15,8 +16,8 @@ class Unit {
     public String team;      // "Red" or "Blue"
     public String type;
     public static int code=0;
-    public double sensorRange=6; // e.g., 100.0
-    public boolean visible = false;
+    public double sensorRange=Constants.sensorRange; // e.g., 100.0
+    public boolean visible = Constants.visible;
     
 
     private List<Point> path = new ArrayList<>();
@@ -110,6 +111,6 @@ class Unit {
 
     @Override
     public String toString() {
-        return team + " Unit at (" + x + ", " + y + ") - Kill Prob: " + killProbability + ", Range: " + range;
+        return "Team: "+team + "\n"+"Type: "+type+"\n"+"Grid (" + x + ", " + y + ")"+"\n"+"Kill Prob: " + killProbability +"\n"+ "Range: " + range+"\n"+"Sensor range: "+sensorRange+"\n"+"Visibility: "+visible;
     }
 }

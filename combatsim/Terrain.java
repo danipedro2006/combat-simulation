@@ -1,4 +1,4 @@
-
+ 
 import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
@@ -15,11 +15,11 @@ class Terrain {
     public static double metricdistance;
     public static int griddistance;
 
-    public static final int MAP_SIZE = 1000;
-    public static final int CELL_SIZE =10;
-    public static final int GRID_SIZE = MAP_SIZE/CELL_SIZE;
+    public static int MAP_SIZE = Constants.MAP_SIZE;
+    public static int CELL_SIZE =Constants.CELL_SIZE;
+    public static int GRID_SIZE = MAP_SIZE/CELL_SIZE;
 
-    public static final int MAX_ALTITUDE = 20;
+    public static final int MAX_ALTITUDE = Constants. MAX_ALTITUDE;
 
     
     public static double[][] altitudeGrid = new double[GRID_SIZE][GRID_SIZE];

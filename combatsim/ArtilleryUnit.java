@@ -1,3 +1,4 @@
+ 
 import java.util.*;
 import java.awt.Point;
 import java.awt.Graphics;
@@ -5,16 +6,16 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class ArtilleryUnit extends Unit {
-    public int shells;       // Number of shells per volley
-    public static int fireRadius=4; // Scatter radius of shell impacts
+    public int voleys=Constants.voleys;       // Number of shells per volley
+    public static int fireRadius=Constants.fireRadius; // Scatter radius of shell impacts
     public int targetX, targetY; // Target coordinates
     public ArrayList<Unit.Point> impactPoints = new ArrayList<>();  
     public List<Unit> destroyed = new ArrayList<>();
-    public int shellEffect=5;
+    public int shellEffect=Constants.shellEffect;
 
     public ArtilleryUnit(int x, int y, int z, double kp, int range,String team,String type, int shells) {
         super(x, y, z, kp, range,"Blue","ARTY"); // Calls the Unit constructor
-        this.shells = shells;
+        this.voleys = shells;
         this.fireRadius = fireRadius;
         
     }
@@ -73,7 +74,7 @@ public class ArtilleryUnit extends Unit {
     Random rand = new Random();
     
 
-    for (int i = 0; i <= shells; i++) {
+    for (int i = 0; i <= voleys; i++) {
         double angle = 2 * Math.PI * rand.nextDouble();
         double deviation = fireRadius * Math.sqrt(rand.nextDouble());
 

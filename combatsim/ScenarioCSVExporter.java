@@ -1,3 +1,4 @@
+ 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -7,8 +8,8 @@ import java.util.List;
 
 public class ScenarioCSVExporter {
 
-  public static void exportUnitsToCSV(BattleManager bm, String filename) throws IOException {
-    List<Unit> units = bm.getAllUnits();
+  public static void exportUnitsToCSV(CombatSimulator simulator, String filename) throws IOException {
+    List<Unit> units = CombatSimulator.getAllUnits();
     try (FileWriter writer = new FileWriter(filename)) {
         // Writing header with the "z" column
         writer.write("team,type,x,y,z\n");
