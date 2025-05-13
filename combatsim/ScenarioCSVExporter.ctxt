@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=ScenarioCSVExporter
-comment1.params=bm\ filename
-comment1.target=void\ exportUnitsToCSV(BattleManager,\ java.lang.String)
+comment1.params=simulator\ filename
+comment1.target=void\ exportUnitsToCSV(CombatSimulator,\ java.lang.String)
 comment2.params=filename
 comment2.target=java.util.List\ loadUnitsFromCSV(java.lang.String)
 numComments=3

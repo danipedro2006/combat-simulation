@@ -1,3 +1,4 @@
+ 
 import java.awt.*;
 import javax.swing.*;
 
@@ -5,7 +6,7 @@ public class AirDefenseUnit extends Unit {
     
     public AirDefenseUnit(int x, int y,int z, double killProbability, double range, String team, String type){
         super(x, y,z, killProbability, range, team, type);
-        this.sensorRange=60;
+        this.sensorRange=Constants.airDefenseSensorRange;
     }
     
     @Override
